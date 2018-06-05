@@ -166,7 +166,7 @@ class PowerStream{
     }
     
     //translate(0,pixel_size);
-    translate(pixel_size,0);
+    translate(pixel_size*2,0);
   }
   
   void blackMode(){
@@ -190,7 +190,7 @@ class PowerStream{
             else
               fill(0);
               
-            rect(0,i*pixel_size,pixel_size,pixel_size);
+            rect(0,(first_segment_size + second_segment_szie + third_segment_size-i-1)*pixel_size,pixel_size*2,pixel_size);
             //rect(i*pixel_size,0,pixel_size,pixel_size);
             popStyle();
           }
@@ -214,7 +214,7 @@ class PowerStream{
             fill(segment_color , int(255 * alpha));
           else
             fill(0);
-          rect(0,i*pixel_size,pixel_size,pixel_size);
+          rect(0,(first_segment_size + second_segment_szie + third_segment_size-i-1)*pixel_size,pixel_size*2,pixel_size);
           //rect(i*pixel_size,0,pixel_size,pixel_size);
           popStyle();
         }
@@ -231,7 +231,7 @@ class PowerStream{
            
             //fill( segment_color , tigger_segment3_sinMap[constrain(int(current_alpha),0,255)]);
             fill( segment_color ,  int(map(sin( TWO_PI/256 * (constrain(int(current_alpha),0,255)) + PI/2),-1,1,trigger_segment3_min,trigger_segment3_max) * alpha));
-            rect(0,i*pixel_size,pixel_size,pixel_size);
+            rect(0,(first_segment_size + second_segment_szie + third_segment_size-i-1)*pixel_size,pixel_size*2,pixel_size);
             //rect(i*pixel_size,0,pixel_size,pixel_size);
             popStyle();
           }
@@ -260,7 +260,7 @@ class PowerStream{
            
             //fill( segment_color , tigger_segment3_sinMap[constrain(int(current_alpha),0,255)]);
             fill( segment_color ,  int(map(sin( TWO_PI/256 * (constrain(int(trigger_segment3_temp_alpha),0,255)) + PI/2),-1,1,trigger_segment3_min,trigger_segment3_max) * alpha));
-            rect(0,i*pixel_size,pixel_size,pixel_size);
+            rect(0,(first_segment_size + second_segment_szie + third_segment_size-i-1)*pixel_size,pixel_size*2,pixel_size);
             //rect(i*pixel_size,0,pixel_size,pixel_size);
             popStyle();
           }
@@ -290,7 +290,7 @@ class PowerStream{
               fill(0);
             else
               fill(segment_color , int(255 * alpha));
-            rect(0,i*pixel_size,pixel_size,pixel_size);
+            rect(0,(first_segment_size + second_segment_szie + third_segment_size-i-1)*pixel_size,pixel_size*2,pixel_size);
             //rect(i*pixel_size,0,pixel_size,pixel_size);
             popStyle();
           }

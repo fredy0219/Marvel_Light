@@ -412,7 +412,7 @@ void draw(){
   
   
   pushMatrix();
-  translate(50,0);
+  translate(10,0);
   for(int i = 0 ; i < 6 ; i++)
     six_gemstone[i].draw();
   popMatrix();
